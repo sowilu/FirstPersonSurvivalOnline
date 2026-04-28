@@ -15,6 +15,9 @@ public class Movement : MonoBehaviour
     public float staminaRegen = 0.8f;
     public float staminaRegenDelay = 1.5f;
     
+    [Header("UI")]
+    public Transform staminaBar;
+    
     [Header("Jump")]
     public float gravity = -9.81f;
     public float jumpHeight = 2;
@@ -36,6 +39,7 @@ public class Movement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
+        currentStamina = maxStamina;
     }
 
     void Update()
@@ -75,6 +79,9 @@ public class Movement : MonoBehaviour
         
         currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
         var speed = isSprinting ? runningSpeed : walkingSpeed;
+        
+        //stamina ui update
+        staminaBar.localScale = new Vector3(1, currentStamina / maxStamina, 1);
         
         //movement
         var move = transform.right * x + transform.forward * z;

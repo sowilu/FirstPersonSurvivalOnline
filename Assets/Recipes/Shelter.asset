@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df68d4ae9084945ae8b1121c091a769e, type: 3}
+  m_Name: Shelter
+  m_EditorClassIdentifier: 
+  name: Shelter
+  preview: {fileID: 4855320063759298407, guid: 1577a8925ed45414382dadf8a1c71208, type: 3}
+  prefab: {fileID: 7068329927599695510, guid: 5c7899d361cca4166b1308852a7fb190, type: 3}
+  requirements:
+  - item: {fileID: 11400000, guid: 35d102094d0c04144a82e00fbd533d38, type: 2}
+    amount: 10
+  - item: {fileID: 11400000, guid: 15263424a624747259057d2517491d1b, type: 2}
+    amount: 4
