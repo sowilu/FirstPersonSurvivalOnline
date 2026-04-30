@@ -39,6 +39,7 @@ public class Builder : MonoBehaviour
         if (preview == null)
         {
             preview = Instantiate(currentRecipe.preview);
+            preview.SetActive(false);
         }
 
         var pos = cam.transform.position + cam.transform.forward * buildDistance;
